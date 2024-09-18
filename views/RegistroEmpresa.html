@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empresa</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-secondary">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Beepo Platform</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container bg-light rounded p-5 shadow-sm mt-5">
+        <h2 class="text-center mb-4">
+            <i class="bi bi-building"></i> Registro de Empresa
+        </h2>
+        <form id="company-form">
+            <div class="mb-3">
+                <label for="companyName" class="form-label">
+                    <i class="bi bi-building"></i> Nombre de la empresa
+                </label>
+                <input type="text" class="form-control" id="companyName" name="companyName"
+                    placeholder="Nombre de la empresa" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">
+                    <i class="bi bi-envelope"></i> Correo electrónico corporativo
+                </label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="nombre@empresa.com"
+                    required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">
+                    <i class="bi bi-lock"></i> Contraseña
+                </label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña"
+                    required>
+            </div>
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">
+                    <i class="bi bi-lock-fill"></i> Confirmación de contraseña
+                </label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                    placeholder="Confirmar contraseña" required>
+            </div>
+            <div class="mb-3">
+                <label for="companyLogo" class="form-label">
+                    <i class="bi bi-cloud-upload"></i> Logo de la empresa (opcional)
+                </label>
+                <input type="file" class="form-control" id="companyLogo" name="companyLogo" accept="image/*">
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">
+                    <i class="bi bi-telephone"></i> Número de teléfono (opcional)
+                </label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Teléfono de contacto">
+            </div>
+
+            <h4 class="mt-4">
+                <i class="bi bi-info-circle"></i> Información de la Empresa
+            </h4>
+            <div class="mb-3">
+                <label for="description" class="form-label">
+                    <i class="bi bi-file-text"></i> Descripción de la empresa
+                </label>
+                <textarea class="form-control" id="description" name="description" rows="4"
+                    placeholder="Misión, visión, etc." required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="industry" class="form-label">
+                    <i class="bi bi-briefcase"></i> Industria o sector
+                </label>
+                <input type="text" class="form-control" id="industry" name="industry" placeholder="Sector empresarial"
+                    required>
+            </div>
+            <div class="mb-3">
+                <label for="companySize" class="form-label">
+                    <i class="bi bi-people"></i> Tamaño de la empresa
+                </label>
+                <input type="number" class="form-control" id="companySize" name="companySize"
+                    placeholder="Número de empleados" required>
+            </div>
+            <div class="mb-3">
+                <label for="website" class="form-label">
+                    <i class="bi bi-globe"></i> Sitio web oficial
+                </label>
+                <input type="url" class="form-control" id="website" name="website"
+                    placeholder="https://www.empresa.com">
+            </div>
+            <div class="mb-3">
+                <label for="socialLinks" class="form-label">
+                    <i class="bi bi-link-45deg"></i> Enlaces a redes sociales
+                </label>
+                <input type="text" class="form-control" id="socialLinks" name="socialLinks"
+                    placeholder="LinkedIn, Facebook, etc.">
+            </div>
+            <div class="mb-3">
+                <label for="location" class="form-label">
+                    <i class="bi bi-geo-alt"></i> Ubicación de la empresa
+                </label>
+                <input type="text" class="form-control" id="location" name="location" placeholder="Ciudad, provincia"
+                    required>
+            </div>
+
+            <h4 class="mt-4">
+                <i class="bi bi-person-lines-fill"></i> Datos de Contacto para Ofertas de Empleo
+            </h4>
+            <div class="mb-3">
+                <label for="contactPerson" class="form-label">
+                    <i class="bi bi-person"></i> Persona de contacto
+                </label>
+                <input type="text" class="form-control" id="contactPerson" name="contactPerson"
+                    placeholder="Nombre y cargo" required>
+            </div>
+            <div class="mb-3">
+                <label for="contactEmail" class="form-label">
+                    <i class="bi bi-envelope"></i> Correo electrónico para postulaciones
+                </label>
+                <input type="email" class="form-control" id="contactEmail" name="contactEmail"
+                    placeholder="contacto@empresa.com" required>
+            </div>
+            <div class="mb-3">
+                <label for="contactPhone" class="form-label">
+                    <i class="bi bi-telephone"></i> Número de teléfono (opcional)
+                </label>
+                <input type="tel" class="form-control" id="contactPhone" name="contactPhone"
+                    placeholder="Teléfono de contacto">
+            </div>
+
+            <h4 class="mt-4">
+                <i class="bi bi-search"></i> Intereses y Búsqueda de Talentos
+            </h4>
+            <div class="mb-3">
+                <label for="interestAreas" class="form-label">
+                    <i class="bi bi-journal-code"></i> Áreas de interés para búsqueda
+                </label>
+                <input type="text" class="form-control" id="interestAreas" name="interestAreas"
+                    placeholder="Áreas de interés" required>
+            </div>
+            <div class="mb-3">
+                <label for="profileTypes" class="form-label">
+                    <i class="bi bi-people"></i> Tipo de perfiles buscados
+                </label>
+                <select class="form-control" id="profileTypes" name="profileTypes" required>
+                    <option value="" disabled selected>Carrera de interés</option>
+                    <option value="Desarrollo de Software">Desarrollo de Software</option>
+                    <option value="Seguridad E Higiene">Seguridad E Higiene</option>
+                    <option value="Quimica">Química</option>
+                    <option value="MicroElectronica">Microelectrónica</option>
+                    <option value="Comercio Exterior">Comercio Exterior</option>
+                    <option value="Medio Ambiente">Medio Ambiente</option>
+                    <option value="Administracion">Administración</option>
+                </select>
+            </div>
+
+            <button type="button" class="btn btn-primary w-100 mt-3" data-bs-toggle="modal"
+                data-bs-target="#paymentForm">
+                <i class="bi bi-building-add"></i> Registrar Empresa
+            </button>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="paymentForm" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="paymentModalLabel">
+                        <i class="bi bi-credit-card"></i> Formulario de Pago
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">Debe abonar <strong>$5.000</strong> para completar el registro de la empresa.
+                    </p>
+                    <form id="paymentForm">
+                        <div class="mb-3">
+                            <label for="cardNumber" class="form-label">
+                                <i class="bi bi-credit-card"></i> Número de Tarjeta:
+                            </label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="expiryDate" class="form-label">
+                                    <i class="bi bi-calendar-date"></i> Fecha de Expiración:
+                                </label>
+                                <input type="text" class="form-control" id="expiryDate" placeholder="MM/AA">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="cvv" class="form-label">
+                                    <i class="bi bi-lock-fill"></i> CVV:
+                                </label>
+                                <input type="text" class="form-control" id="cvv" placeholder="123">
+                            </div>
+                        </div>
+                        <a href="./Empresa.html" class="btn btn-success w-100">
+                            <i class="bi bi-check-circle"></i> Pagar
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>

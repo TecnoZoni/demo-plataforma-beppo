@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Empresa</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="vh-100 bg-secondary">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Beepo Platform</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <i class="bi bi-bell-fill text-light fs-3 hover-shadow hover-opacity-75"
+                style="cursor: pointer; font-size: 1.5rem;"></i>
+        </div>
+    </nav>
+
+    <div class="container my-5 bg-light rounded p-5 shadow-sm">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Perfil de Empresa - Creativorox</h2>
+            <p class="text-muted">Soluciones creativas y digitales para potenciar tu negocio</p>
+        </div>
+
+        <div class="row">
+            <!-- Logo y actualización -->
+            <div class="col-md-3 text-center">
+                <div class="circular-logo mb-4">
+                    <img id="companyLogo" src="../img/logo-removebg.png" class="rounded-circle img-fluid"
+                        alt="Logo de Creativorox">
+                    <label for="newCompanyLogo" class="upload-icon mt-2 d-block">
+                        <i class="bi bi-upload fs-4"></i> Subir nuevo logo
+                    </label>
+                    <input type="file" class="file-input d-none" id="newCompanyLogo" name="newCompanyLogo"
+                        accept="image/*">
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" id="updateLogoButton">Actualizar Logo</button>
+            </div>
+
+            <!-- Datos de la empresa -->
+            <div class="col-md-9">
+                <h4 class="mb-3"><i class="bi bi-building"></i> Datos de la Empresa</h4>
+                <ul class="list-unstyled">
+                    <li><strong>Nombre:</strong> Creativorox S.A.</li>
+                    <li><strong>Email:</strong> contacto@creativorox.com</li>
+                    <li><strong>Teléfono:</strong> +54 11 1234-5678</li>
+                    <li><strong>Descripción:</strong> Creativorox es una agencia digital enfocada en brindar soluciones
+                        innovadoras en diseño, desarrollo web y marketing digital.</li>
+                    <li><strong>Industria:</strong> Marketing Digital, Desarrollo de Software</li>
+                    <li><strong>Tamaño de la Empresa:</strong> 50-100 empleados</li>
+                    <li><strong>Sitio Web:</strong> <a href="https://www.creativorox.com"
+                            target="_blank">www.creativorox.com</a></li>
+                    <li><strong>Redes Sociales:</strong>
+                        <a href="#" class="text-primary"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-info mx-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-github"></i></a>
+                    </li>
+                    <li><strong>Ubicación:</strong> Buenos Aires, Argentina</li>
+                    <li><strong>Persona de Contacto:</strong> Juan Pérez</li>
+                    <li><strong>Email de Contacto:</strong> juan.perez@creativorox.com</li>
+                    <li><strong>Teléfono de Contacto:</strong> +54 11 9876-5432</li>
+                    <li><strong>Áreas de Interés:</strong> Desarrollo de Software, Marketing, Diseño Gráfico</li>
+                    <li><strong>Tipos de Perfiles Buscados:</strong> Programadores, Diseñadores, Especialistas en SEO
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Sección de filtrado y perfiles de alumnos -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h4><i class="bi bi-funnel"></i> Filtrar Perfiles de Alumnos</h4>
+                <label for="profileFilter" class="form-label">Tipo de perfiles buscados</label>
+                <select class="form-select" id="profileFilter" name="profileFilter" required>
+                    <option value="" disabled selected>Selecciona una carrera</option>
+                    <option value="Desarrollo de Software">Desarrollo de Software</option>
+                    <option value="Seguridad E Higiene">Seguridad E Higiene</option>
+                    <option value="Química">Química</option>
+                    <option value="Microelectrónica">Microelectrónica</option>
+                    <option value="Comercio Exterior">Comercio Exterior</option>
+                    <option value="Medio Ambiente">Medio Ambiente</option>
+                    <option value="Administración">Administración</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <h4><i class="bi bi-people"></i> Perfiles de Alumnos</h4>
+                <div id="student-previews">
+                    <!-- Aquí se mostrarán las vistas previas de los estudiantes -->
+                    <div class="student-profile mb-3 p-3 bg-white rounded shadow-sm">
+                        <h5 class="fw-bold">Agustín Minzoni</h5>
+                        <p class="mb-1"><strong>Carrera:</strong> Desarrollo de Software</p>
+                        <p class="mb-1"><strong>Experiencia:</strong> Desarrollador en Creativorox</p>
+                        <a href="./perfil-alumno.html" class="btn btn-sm btn-outline-primary">Ver Perfil</a>
+                    </div>
+                    <div class="student-profile mb-3 p-3 bg-white rounded shadow-sm">
+                        <h5 class="fw-bold">Carla Gómez</h5>
+                        <p class="mb-1"><strong>Carrera:</strong> Administracion de Empresas</p>
+                        <p class="mb-1"><strong>Experiencia:</strong> Freelancer en Marketing Digital</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Ver Perfil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>
